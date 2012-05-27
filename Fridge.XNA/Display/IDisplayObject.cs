@@ -14,7 +14,7 @@ namespace Fridge.XNA.Display
         bool IsVisible { get; set; }
         float Width { get; set; }
         float Height { get; set; }
-        DisplayStage Stage { get; }
+        Stage Stage { get; }
 
         void SetOrigin(DisplayObjectOrigin origin);
         void SetOrigin();

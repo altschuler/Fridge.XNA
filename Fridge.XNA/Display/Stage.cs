@@ -3,14 +3,14 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Fridge.XNA.Display
 {
-    public class DisplayStage : DisplayObjectContainer
+    public class Stage : DisplayObjectContainer
     {
         private int StageWidth;
         private int StageHeight;
         public GraphicsDeviceManager Graphics;
         public SpriteBatch SpriteBatch;
         
-        public DisplayStage(GraphicsDeviceManager gdm, int stageWidth, int stageHeight)
+        public Stage(GraphicsDeviceManager gdm, int stageWidth, int stageHeight)
         {
             this.StageWidth = stageWidth;
             this.StageHeight = stageHeight;

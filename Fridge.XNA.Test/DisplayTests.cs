@@ -11,12 +11,30 @@ namespace Fridge.XNA.Test
     [TestClass]
     public class DisplayTests
     {
+        private Game Game;
+        private Stage Stage;
+
         public DisplayTests()
         {
             //
             // TODO: Add constructor logic here
             //
         }
+        #region Test case setup
+
+        [TestInitialize()]
+        public void MyTestInitialize()
+        {
+            if (this.Game != null)
+            {
+                this.Game.Dispose();
+            }
+
+            this.Game = new Game();
+            this.Stage = new Stage(new GraphicsDeviceManager(this.Game), 1000, 1000);
+        }
+        
+        #endregion
 
         private TestContext testContextInstance;
 
@@ -49,8 +67,6 @@ namespace Fridge.XNA.Test
         // public static void MyClassCleanup() { }
         //
         // Use TestInitialize to run code before running each test 
-        // [TestInitialize()]
-        // public void MyTestInitialize() { }
         //
         // Use TestCleanup to run code after each test has run
         // [TestCleanup()]
@@ -61,25 +77,22 @@ namespace Fridge.XNA.Test
         [TestMethod]
         public void TestDisplayObjectContainerContainsChildren()
         {
-            var game = new Game();
-
-            var stage = new DisplayStage(new GraphicsDeviceManager(game), 1000, 1000);
             var container = new DisplayObjectContainer();
             var childContainer = new DisplayObjectContainer();
             var grandChildContainer = new DisplayObjectContainer();
 
-            stage.AddChild(container);
+            this.Stage.AddChild(container);
             childContainer.AddChild(grandChildContainer);
             container.AddChild(childContainer);
 
-            Assert.IsTrue(stage.Contains(container), "Stage must contain container");
-            Assert.IsTrue(stage.Contains(childContainer), "Stage must contain child container");
-            Assert.IsTrue(stage.Contains(grandChildContainer), "Stage must contain grand child container");
-            Assert.IsTrue(container.Contains(childContainer), "Container must contain child container");
+            Assert.IsTrue(this.Stage.Contains(container), "Stage must contain container");
+            Assert.IsTrue(this.Stage.Contains(childContainer), "Stage must contain child container");
+            Assert.IsTrue(this.Stage.Contains(grandChildContainer), "Stage must contain grand child container");
+            Assert.IsTrue(this.Stage.Contains(childContainer), "Container must contain child container");
             Assert.IsTrue(childContainer.Contains(grandChildContainer), "Child container must contain grand child container");
 
             Assert.IsFalse(childContainer.Contains(container), "Child container must not contain container");
-            Assert.IsFalse(stage.Contains(grandChildContainer, false), "Stage must contain grand child container when not looking deep");
+            Assert.IsFalse(this.Stage.Contains(grandChildContainer, false), "Stage must contain grand child container when not looking deep");
             Assert.IsFalse(grandChildContainer.Contains(childContainer), "Grand child container must not contain child container");
         }
     }
