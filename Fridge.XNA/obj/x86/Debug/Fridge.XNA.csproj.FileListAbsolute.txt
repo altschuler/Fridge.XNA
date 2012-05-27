@@ -1,0 +1,6 @@
+C:\Users\Simon\Development\Projects\Fridge.XNA\Fridge.XNA\bin\x86\Debug\Fridge.XNA.dll
+C:\Users\Simon\Development\Projects\Fridge.XNA\Fridge.XNA\bin\x86\Debug\Fridge.XNA.pdb
+C:\Users\Simon\Development\Projects\Fridge.XNA\Fridge.XNA\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Simon\Development\Projects\Fridge.XNA\Fridge.XNA\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Simon\Development\Projects\Fridge.XNA\Fridge.XNA\obj\x86\Debug\Fridge.XNA.dll
+C:\Users\Simon\Development\Projects\Fridge.XNA\Fridge.XNA\obj\x86\Debug\Fridge.XNA.pdb

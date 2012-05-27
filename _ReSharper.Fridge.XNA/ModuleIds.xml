@@ -1,0 +1,4 @@
+<Modules>
+  <Module PersistentId="71FB282D-ADE8-4C0E-955D-19EF658E1083" ModuleId="Fridge.XNA" />
+  <Module PersistentId="919E35B5-D4FB-40F9-AB38-5D3EB2B76EFB" ModuleId="Fridge.XNA.Test" />
+</Modules>

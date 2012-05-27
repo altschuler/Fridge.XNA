@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="7ec4661c-0a73-4cc4-8870-fb9196f47da4" name="Simon@SLAPTOP 2012-05-17 01:43:38" runUser="Slaptop\Simon" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="e0c2a3b5-474f-4d65-9b0f-6b5a38aa0579">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Simon_SLAPTOP 2012-05-17 01_43_38">
+      <DeploymentItem filename="C:\Users\Simon\Development\Projects\Fridge.XNA\Fridge.XNA\bin\x86\Debug\Fridge.XNA.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-05-17T01:43:38.1096271+02:00" queuing="2012-05-17T01:43:40.1696300+02:00" start="2012-05-17T01:43:40.3096302+02:00" finish="2012-05-17T01:44:17.4227147+02:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="1" executed="1" error="0" failed="0" timeout="0" aborted="1" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="SLAPTOP" outcome="Error" timestamp="2012-05-17T01:44:17.4227147+02:00">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="TestDisplayObjectContainerContainsChildren" storage="c:\users\simon\development\projects\fridge.xna\fridge.xna.test\bin\debug\fridge.xna.test.dll" id="87e09e03-8483-bda8-f2cd-ee09035ddc9f">
+      <Execution id="5e180476-28c7-4ab7-b8b7-c5416c605973" />
+      <TestMethod codeBase="C:/Users/Simon/Development/Projects/Fridge.XNA/Fridge.XNA.Test/bin/Debug/Fridge.XNA.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Fridge.XNA.Test.DisplayTests, Fridge.XNA.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestDisplayObjectContainerContainsChildren" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="87e09e03-8483-bda8-f2cd-ee09035ddc9f" executionId="5e180476-28c7-4ab7-b8b7-c5416c605973" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="5e180476-28c7-4ab7-b8b7-c5416c605973" testId="87e09e03-8483-bda8-f2cd-ee09035ddc9f" testName="TestDisplayObjectContainerContainsChildren" computerName="SLAPTOP" duration="00:00:36.9930843" startTime="2012-05-17T01:43:40.4296304+02:00" endTime="2012-05-17T01:44:17.4227147+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5e180476-28c7-4ab7-b8b7-c5416c605973">
+    </UnitTestResult>
+  </Results>
+</TestRun>
