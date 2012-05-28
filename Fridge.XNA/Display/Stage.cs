@@ -7,8 +7,10 @@ namespace Fridge.XNA.Display
     {
         private int StageWidth;
         private int StageHeight;
+
         public GraphicsDeviceManager Graphics;
         public SpriteBatch SpriteBatch;
+        public Color BackgroundColor;
         
         public Stage(GraphicsDeviceManager gdm, int stageWidth, int stageHeight)
         {
@@ -19,6 +21,8 @@ namespace Fridge.XNA.Display
 
             this.Graphics.PreferredBackBufferWidth = this.StageWidth;
             this.Graphics.PreferredBackBufferHeight = this.StageHeight;
+
+            this.BackgroundColor = Color.White;
         }
 
         public void LoadContent() 
@@ -28,7 +32,7 @@ namespace Fridge.XNA.Display
 
         public void Draw()
         {
-            this.Graphics.GraphicsDevice.Clear(Color.White);
+            this.Graphics.GraphicsDevice.Clear(this.BackgroundColor);
 
             this.SpriteBatch.Begin();
 

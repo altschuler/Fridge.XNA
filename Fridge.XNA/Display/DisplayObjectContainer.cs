@@ -29,7 +29,7 @@ namespace Fridge.XNA.Display
 
         public override void Update(GameTime gameTime)
         {
-            foreach (IDisplayObject displayObject in this.Children)
+            foreach (IDisplayObject displayObject in this.Children.ToList())
                 displayObject.Update(gameTime);
 
             base.Update(gameTime);
@@ -37,13 +37,13 @@ namespace Fridge.XNA.Display
 
         public bool Contains(IDisplayObject displayObject)
         {
-            return Contains(displayObject, true);
+            return this.Contains(displayObject, true);
         }
 
         public bool Contains(IDisplayObject displayObject, bool deep)
         {
-            bool any = Children.Any(child => child is DisplayObjectContainer && (child as DisplayObjectContainer).Contains(displayObject, true));
-            return deep ? any || this.Children.Contains(displayObject): this.Children.Contains(displayObject);
+            bool any = this.Children.Any(child => child is DisplayObjectContainer && (child as DisplayObjectContainer).Contains(displayObject, true));
+            return deep ? any || this.Children.Contains(displayObject) : this.Children.Contains(displayObject);
         }
 
         public void AddChild(IDisplayObject displayObject)
