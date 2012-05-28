@@ -29,6 +29,7 @@ namespace Fridge.XNA.Display
 
         public override void Update(GameTime gameTime)
         {
+            //TODO mark children to be removed and sweep after update
             foreach (IDisplayObject displayObject in this.Children.ToList())
                 displayObject.Update(gameTime);
 

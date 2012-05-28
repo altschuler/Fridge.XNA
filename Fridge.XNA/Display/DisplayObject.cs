@@ -24,13 +24,13 @@ namespace Fridge.XNA.Display
         public float Scale { get; set; }
         public Color Color { get; set; }
 
-        public Texture2D Texture { get; set; }
         public DisplayObjectContainer Parent { get; set; }
 
         protected Vector2 PositionDelta { get; private set; }
 
         private Vector2 _Position;
         private bool _IsVisible;
+        private Texture2D _Texture;
 
         public DisplayObject()
         {
@@ -39,6 +39,16 @@ namespace Fridge.XNA.Display
             this.Scale = 1f;
             this.Color = Color.White;
             this.IsVisible = true;
+        }
+
+        public Texture2D Texture 
+        { 
+            get { return this._Texture; }
+            set 
+            { 
+                this._Texture = value;
+                this.SetOrigin();
+            } 
         }
 
         public Vector2 Position
